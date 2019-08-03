@@ -1,0 +1,63 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    //"eslint:recommended",
+    //"plugin:react/recommended"
+  ],
+  "settings": {
+    "react": {
+      "createClass": "createReactClass", // Regex for Component Factory to use,
+      // default to "createReactClass"
+      "pragma": "React",  // Pragma to use, default to "React"
+      "version": "15.0", // React version, default to the latest React stable release
+      "flowVersion": "0.53" // Flow version
+    },
+    "propWrapperFunctions": [
+      {"property": "freeze", "object": "Object"},
+      {"property": "myFavoriteWrapper"}
+    ]
+  },
+  "rules": {
+
+    "no-undef": 1,
+    "no-unused-vars": 1,
+    "eqeqeq": [2, "smart"],
+    "no-floating-decimal": 2,
+    "no-multi-spaces": [2, {
+      "exceptions": {
+        "ImportDeclaration": true,
+        "VariableDeclarator": true
+      }
+    }],
+    "no-multi-str": 2,
+    "camelcase": 1,
+    "eol-last": 1,
+    "indent": [2, 2, {
+      "SwitchCase": 1,
+      "VariableDeclarator": 1
+    }],
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "always"],
+    "space-before-blocks": 2,
+    "space-before-function-paren": [2, "never"],
+    "constructor-super": 2,
+    "arrow-spacing": 2,
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-console": 0,
+    "no-debugger":  0,
+  },
+  "plugins": [
+      "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+ProjectTitle: crm
+
+PageList:
+- file: index.html
+  ready: 50
+- file: contacts.html
+  ready: 01
